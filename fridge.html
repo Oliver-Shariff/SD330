@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fridge Display</title>
+<style>
+        .mainDiv    {
+            float: none;
+            border: solid black;
+            border-width: 5px;
+            padding: 2px 2px 2px 2px;
+            margin: auto;
+            width: 50%;
+            height: 600px;
+
+        }
+        .subDiv     {
+            border: solid grey;
+            border-width: 1px;
+            padding: 2px 2px 2px 2px;
+            margin: auto;
+            margin-top: 5px;
+            height: 100%;
+        }
+        #div2{
+            height: 20%;
+            width: 100%;
+
+        }
+        #temp{
+            float: left;
+            width: 24%;
+            text-align: center;
+            font-size: xxx-large;
+        }
+        #clock{
+            float: right;
+            width: 74%;
+            justify-content: center;
+            font-size: xxx-large;
+            text-align: center;
+        }
+        #custDisplay{
+            height: 50%;
+            width: 100%;
+            margin: auto;
+            border: solid grey;
+            border-width: 1px;
+            padding: 2px 2px 2px 2px;
+            justify-content: center;
+            text-align: center;
+            font-size: xxx-large;
+        }
+        .buttonDiv{
+            height: 10%;
+            width: 100%;
+            float: left;
+        }
+
+</style>
+</head>
+<body>
+
+    <div id="div1" class="mainDiv">
+        <div id="pwrDiv" class="buttonDiv">
+            <input type = button onclick ="powerFlip()" id="powerButton" value = "ON" style="background-color: green; height: 100%; width: 100%;">
+        </div>
+        <p style="clear: left">
+
+        </p>
+        <div id="div2" >
+            <div id="temp" class="subDiv">
+                40F
+            </div>
+            <div id="clock" class="subDiv">
+
+            </div>
+        </div>
+        <br>
+        <div id="custDisplay">
+            <img src ="https://i.imgur.com/T1FjlT3_d.webp?maxwidth=520&shape=thumb&fidelity=high" width="auto"; height="90%">
+        </div>
+        <br>
+        <div id="option" class="buttonDiv" >
+            <input type = button onclick ="displayFlip()" id="displayButton" value = "Display: Interior" style="height: 100%; width: 100%;">
+        </div>
+    </div>
+
+<script>
+    function displayFlip(){
+        display = document.getElementById("custDisplay");
+        dispBtn = document.getElementById("displayButton");
+        if(dispBtn.value == "Display: Interior"){
+            dispBtn.value = "Display: Browser"
+            display.innerHTML="Browser opens in new window"
+            mybrowser = window.open("https://www.marist.edu/", "mybrowser", "width=600px,height=400px", "menubar=yes");
+        }
+        else if(dispBtn.value == "Display: Browser"){
+            mybrowser.close();
+            dispBtn.value = "Display: TV"
+            display.innerHTML="TV";
+        }
+        else{
+            dispBtn.value = "Display: Interior"
+            display.innerHTML = '<img src ="https://i.imgur.com/T1FjlT3_d.webp?maxwidth=520&shape=thumb&fidelity=high" width="auto"; height="90%">';
+        }
+
+    }
+
+    function powerFlip(){
+        pwrBtn = document.getElementById("powerButton")
+        if(pwrBtn.value == "ON"){
+            pwrBtn.value = "OFF";
+            pwrBtn.style.backgroundColor="red";
+            document.getElementById("temp").style.display = "none";
+            document.getElementById("custDisplay").style.display = "none";
+            document.getElementById("option").style.display= "none";
+            mybrowser.close();
+        }
+        else{
+            pwrBtn.value = "ON";
+            pwrBtn.style.backgroundColor="green";
+            document.getElementById("temp").style.display = "";
+            document.getElementById("custDisplay").style.display = "";
+            document.getElementById("option").style.display= "";
+        }
+    }
+    function currentTime(){
+        let date = new Date();
+        let hh = date.getHours();
+        let mm = date.getMinutes();
+        let session = "AM";
+
+        if(hh == 0){
+            hh = 12;
+        }
+        if(hh > 12){
+            hh = hh - 12;
+            session = "PM";
+        }
+
+        hh = (hh < 10) ? "0" + hh : hh;
+        mm = (mm < 10) ? "0" + mm : mm;
+
+        let time = hh + ":" + mm + " " + session;
+
+        document.getElementById("clock").innerText = time;
+        let t = setTimeout(function(){ currentTime() }, 1000);
+    }
+    currentTime();
+</script>
+</body>
+</html>
