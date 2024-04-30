@@ -1,0 +1,156 @@
+{
+    "lots": [
+        {
+            "Name": "McCann",
+            "Map": "mccann_map.jpg",
+            "Spaces": "numOfSpaces",
+            "Types": "faculty, commuter, resident",
+            "Open access time start": "6:00pm",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours",
+            "Spots": [
+                {
+                    "Number": "001",
+                    "Type": "commuter",
+                    "Handicap": "no",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "002",
+                    "Type": "commuter",
+                    "Handicap": "no",
+                    "Availability": "filled",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "003",
+                    "Type": "commuter",
+                    "Handicap": "no",
+                    "Availability": "reserved",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "004",
+                    "Type": "resident",
+                    "Handicap": "no",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "005",
+                    "Type": "resident",
+                    "Handicap": "no",
+                    "Availability": "filled",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "006",
+                    "Type": "resident",
+                    "Handicap": "no",
+                    "Availability": "reserved",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "007",
+                    "Type": "faculty",
+                    "Handicap": "no",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "008",
+                    "Type": "faculty",
+                    "Handicap": "no",
+                    "Availability": "filled",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "009",
+                    "Type": "faculty",
+                    "Handicap": "no",
+                    "Availability": "reserved",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "010",
+                    "Type": "any",
+                    "Handicap": "Yes",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "011",
+                    "Type": "any",
+                    "Handicap": "Yes",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                },
+                {
+                    "Number": "012",
+                    "Type": "any",
+                    "Handicap": "Yes",
+                    "Availability": "open",
+                    "Filled time": "time",
+                    "Reopen time": "time"
+                }
+            ]
+        },
+        {
+            "Name": "Foy",
+            "Map": "foy_map.jpg",
+            "Spaces": "50",
+            "Types": "faculty",
+            "Open access time start": "6:00pm",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours"
+        },
+        {
+            "Name": "Dyson",
+            "Map": "dyson_map.jpg",
+            "Spaces": "0",
+            "Types": "none",
+            "Open access time start": "5:59am",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours"
+        },
+        {
+            "Name": "Fontaine",
+            "Map": "fontaine_map.jpg",
+            "Spaces": "30",
+            "Types": "faculty, commuter, resident",
+            "Open access time start": "10:00pm",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours"
+        },
+        {
+            "Name": "Hoop",
+            "Map": "hoop_map.jpg",
+            "Spaces": "100",
+            "Types": "resident",
+            "Open access time start": "6:00pm",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours"
+        },
+        {
+            "Name": "Beck West",
+            "Map": "beck_west_map.jpg",
+            "Spaces": "150",
+            "Types": "faculty, commuter, resident",
+            "Open access time start": "8:00pm",
+            "Closed access time start": "6:00am",
+            "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours"
+        }
+    ]
+}
