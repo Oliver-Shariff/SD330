@@ -27,10 +27,6 @@ async function loadLots() { //this populates the lots page with a quick view of 
         document.getElementById(localDiv).innerHTML += thisLot.Comments;
         document.getElementById(localDiv).innerHTML += '</div>';
     }
-    for (i = 0; i < data['McCann']['Spots'].length; i++) {
-
-    }
-
 }
 
 async function loadSpots() {// This function will load the info for each lots main page
@@ -41,11 +37,34 @@ async function loadSpots() {// This function will load the info for each lots ma
         let thisLot = data['lots'][i]
         var title = document.title;
         console.log(title);
-        if (title == thisLot.Name) {
+        if (title == thisLot.Name) { // only execute when page matches object
             let localDiv = "div" + data['lots'][i].Name; //this is a main div on each lots individual page
             console.log(localDiv);
             document.getElementById(localDiv).innerHTML += '<h1>' + thisLot.Name + '</h1>';
             document.getElementById(localDiv).innerHTML += '<a id="mapImage' + i + '"> <img src="' + thisLot.Map + '" class="fullMap"> </a><p></p>';
+            document.getElementById(localDiv).innerHTML += thisLot.Comments;
+            if( thisLot.Spots.length > 0){ // see if spots data is available for lot
+                document.getElementById(localDiv).innerHTML += "This parking lot has the following spots: ";
+                document.getElementById(localDiv).innerHTML += '<div id="spots' + thisLot.Name + '"></div>'
+                for (i = 0; i < thisLot.Spots.length; i++){
+                    let localDiv = "spots" + thisLot.Name
+                    let thisSpot = thisLot.Spots[i];
+                    document.getElementById(localDiv).innerHTML += "Number: " + thisSpot.Number + "<p></p>";
+                    document.getElementById(localDiv).innerHTML += "Type: " + thisSpot.Type + "<p></p>"
+                    document.getElementById(localDiv).innerHTML += "Handicap: " + thisSpot.Handicap + "<p></p>";
+                    document.getElementById(localDiv).innerHTML += "Availability: " + thisSpot.Availability + "<p></p>";
+                    
+                    document.getElementById(localDiv).innerHTML += "<hr>";
+                
+                    
+                
+                
+                ;
+                
+                }
+            }
+            
+            
 
         }
     }

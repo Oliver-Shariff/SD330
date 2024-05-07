@@ -15,96 +15,96 @@
                     "Type": "commuter",
                     "Handicap": "no",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "002",
                     "Type": "commuter",
                     "Handicap": "no",
                     "Availability": "filled",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "003",
                     "Type": "commuter",
                     "Handicap": "no",
                     "Availability": "reserved",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "004",
                     "Type": "resident",
                     "Handicap": "no",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "005",
                     "Type": "resident",
                     "Handicap": "no",
                     "Availability": "filled",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "006",
                     "Type": "resident",
                     "Handicap": "no",
                     "Availability": "reserved",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "007",
                     "Type": "faculty",
                     "Handicap": "no",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "008",
                     "Type": "faculty",
                     "Handicap": "no",
                     "Availability": "filled",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "009",
                     "Type": "faculty",
                     "Handicap": "no",
                     "Availability": "reserved",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "010",
                     "Type": "any",
                     "Handicap": "Yes",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "011",
                     "Type": "any",
                     "Handicap": "Yes",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 },
                 {
                     "Number": "012",
                     "Type": "any",
                     "Handicap": "Yes",
                     "Availability": "open",
-                    "Filled time": "time",
-                    "Reopen time": "time"
+                    "Filled_time": "time",
+                    "Reopen_time": "time"
                 }
             ]
         },
