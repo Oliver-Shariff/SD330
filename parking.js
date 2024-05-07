@@ -21,7 +21,7 @@ async function loadLots() { //this populates the lots page with a quick view of 
         let localDiv = "lotDiv" + i; // A new div is created for each lot
         let localMap = "mapImage" + i; // A new image is created for each lot
         let testMap = "https://www.marist.edu/documents/d/guest/marist-2d-pking-traffic-maps_2400x1600_map-only_2-232";
-        document.getElementById("lotFeed").innerHTML += '<div id = "lotDiv' + i + '">';
+        document.getElementById("lotFeed").innerHTML += '<div id = "lotDiv' + i + '" class = "feedItem">';
         document.getElementById(localDiv).innerHTML += '<h1><a href="' + thisLot.Name + '.html">' + thisLot.Name + '</h1></a><p></p> '; //This header also creates a link for each lot
         document.getElementById(localDiv).innerHTML += ' <a id="mapImage' + i + '"> <img src="' + thisLot.Map + '" alt="CampusMap" class="lotMap"> </a><p></p>';
         document.getElementById(localDiv).innerHTML += thisLot.Comments;
