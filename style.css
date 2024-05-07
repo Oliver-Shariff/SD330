@@ -26,3 +26,9 @@
 div{
     border: solid black 1px;
 }
+.lotMap{
+    width: 90%;
+}
+.fullMap{
+    width: 80%;
+}

@@ -8,7 +8,8 @@
             "Open access time start": "6:00pm",
             "Closed access time start": "6:00am",
             "Comments": "Drivers may only park in spots desginated their type during closed access hours, drivers may park in any spots during open access hours",
-            "Spots": [
+            "Spots": 
+            [
                 {
                     "Number": "001",
                     "Type": "commuter",
