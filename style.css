@@ -1,0 +1,28 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: -15px;
+    margin-left: -15px;
+    width: 100% + 15px;
+}
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    font-size: 3rem;
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+div{
+    border: solid black 1px;
+}

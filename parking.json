@@ -2,7 +2,7 @@
     "lots": [
         {
             "Name": "McCann",
-            "Map": "mccann_map.jpg",
+            "Map": "https://www.marist.edu/documents/d/guest/marist-2d-pking-traffic-maps_2400x1600_map-only_2-232",
             "Spaces": "numOfSpaces",
             "Types": "faculty, commuter, resident",
             "Open access time start": "6:00pm",
