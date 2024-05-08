@@ -24,7 +24,7 @@ async function loadLots() { //this populates the lots page with a quick view of 
         document.getElementById("lotFeed").innerHTML += '<div id = "lotDiv' + i + '" class = "feedItem">';
         document.getElementById(localDiv).innerHTML += '<h1><a href="' + thisLot.Name + '.html">' + thisLot.Name + '</h1></a><p></p> '; //This header also creates a link for each lot
         document.getElementById(localDiv).innerHTML += ' <a id="mapImage' + i + '"> <img src="' + thisLot.Map + '" alt="CampusMap" class="lotMap"> </a><p></p>';
-        document.getElementById(localDiv).innerHTML += thisLot.Comments;
+        
         document.getElementById(localDiv).innerHTML += '</div>';
     }
 }
@@ -42,29 +42,44 @@ async function loadSpots() {// This function will load the info for each lots ma
             console.log(localDiv);
             document.getElementById(localDiv).innerHTML += '<h1>' + thisLot.Name + '</h1>';
             document.getElementById(localDiv).innerHTML += '<a id="mapImage' + i + '"> <img src="' + thisLot.Map + '" class="fullMap"> </a><p></p>';
-            document.getElementById(localDiv).innerHTML += thisLot.Comments;
-            if( thisLot.Spots.length > 0){ // see if spots data is available for lot
+            document.getElementById(localDiv).innerHTML += thisLot.Comments + ". <p></p>";
+            document.getElementById(localDiv).innerHTML += 'This lot opens at <strong>' + thisLot.Open + '</strong> and closes at <strong>' + thisLot.Close + '</strong>. <p></p>';
+            if (thisLot.Spots) { // see if spots data is available for lot
                 document.getElementById(localDiv).innerHTML += "This parking lot has the following spots: ";
                 document.getElementById(localDiv).innerHTML += '<div id="spots' + thisLot.Name + '"></div>'
-                for (i = 0; i < thisLot.Spots.length; i++){
-                    let localDiv = "spots" + thisLot.Name
+                for (i = 0; i < thisLot.Spots.length; i++) {
+                    let localDiv = "spots" + thisLot.Name // div that holds all card
+                    let cardDiv = "spotNum_" + i; //div for each card
                     let thisSpot = thisLot.Spots[i];
-                    document.getElementById(localDiv).innerHTML += "Number: " + thisSpot.Number + "<p></p>";
-                    document.getElementById(localDiv).innerHTML += "Type: " + thisSpot.Type + "<p></p>"
-                    document.getElementById(localDiv).innerHTML += "Handicap: " + thisSpot.Handicap + "<p></p>";
-                    document.getElementById(localDiv).innerHTML += "Availability: " + thisSpot.Availability + "<p></p>";
-                    
-                    document.getElementById(localDiv).innerHTML += "<hr>";
-                
-                    
-                
-                
-                ;
-                
+
+                    if (thisSpot.Availability == "open") {
+                        document.getElementById(localDiv).innerHTML += '<div class="spotCardAvailable" id = "spotNum_' + i + '">';
+                    }
+                    else if(thisSpot.Availability == "filled"){
+                        document.getElementById(localDiv).innerHTML += '<div class="spotCardFilled" id = "spotNum_' + i + '">';
+                    }
+                    else {
+                        document.getElementById(localDiv).innerHTML += '<div class="spotCard" id = "spotNum_' + i + '">';
+                    }
+                    document.getElementById(cardDiv).innerHTML += "Availability: " + thisSpot.Availability + "<p></p>";
+                    document.getElementById(cardDiv).innerHTML += "Number: " + thisSpot.Number + "<p></p>";
+                    document.getElementById(cardDiv).innerHTML += "Type: " + thisSpot.Type + "<p></p>"
+                    document.getElementById(cardDiv).innerHTML += "Handicap: " + thisSpot.Handicap + "<p></p>";
+
+                    document.getElementById(localDiv).innerHTML += "</div>";
+
+
+
+
+                    ;
+
                 }
             }
-            
-            
+            else{
+                document.getElementById(localDiv).innerHTML += "<h1>These spots haven't been generated yet. Check out <a href = McCann.html> McCann </a></h1>";
+            }
+
+
 
         }
     }
